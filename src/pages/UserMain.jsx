@@ -3,6 +3,9 @@ import Header from '../Components/Header'
 import ProfileCard from '../Components/ProfileCard'
 import { Col, Row } from 'react-bootstrap'
 import { userDetails } from '../services/allApis'
+import { Link } from 'react-router-dom'
+
+
 
 
 
@@ -49,6 +52,7 @@ function UserMain() {
         <div  className='card shadow p-3 m-2 mt-5'>
 
             <Header InDashboard={true}/>
+            
 
 
                
@@ -56,6 +60,7 @@ function UserMain() {
                     <div className='d-flex justify-content-center'>
         
                      <h1 >All profiles</h1>
+                    
                     </div>
 
            

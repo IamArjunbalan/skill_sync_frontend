@@ -46,3 +46,21 @@ export const adminDel = async (headers, id) => {
 
 }
 
+export const addMessageApi=async(data)=>{
+    return await commonApi("POST",`${BASE_URL}/user/addmessage`,data,"")
+}
+
+export  const viewMsg=async(headers)=>{
+    return await commonApi("GET",`${BASE_URL}/user/viewmessage`,'',headers)
+}
+
+export const deleteMsg = async (headers, id) => {
+    return await commonApi("DELETE", `${BASE_URL}/user/deleteMessage/${id}`,{}, headers)
+
+}
+
+export const deleteRvw = async (headers, id) => {
+    return await commonApi("DELETE", `${BASE_URL}/user/deleteReview/${id}`,{}, headers)
+
+}
+

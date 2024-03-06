@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Table from 'react-bootstrap/Table';
-import { userReview } from '../services/allApis';
+import { deleteRvw, userReview } from '../services/allApis';
+import { toast } from 'react-toastify';
+
+
 
 
 
@@ -19,6 +22,20 @@ function Adminreview() {
     }
     else {
       setReviews([])
+    }
+
+  }
+  const DeleteReview = async (id) => {
+    const reqHeader = {
+      'Content-Type': "application/json", "Authorization": `Bearer ${localStorage.getItem("token")}`
+    }
+    const result = await deleteRvw(reqHeader,id)
+    if (result.status == 200) {
+      toast.success("Review deleted")
+      getReviews()
+    }
+    else {
+      toast.error("Deletion Failed")
     }
 
   }
@@ -64,6 +81,7 @@ function Adminreview() {
                     
                     <td>{item.name}</td>
                     <td>{item.review}</td>
+                    <td><button className='btn btn-danger' onClick={() => DeleteReview(item._id)}>delete</button></td>
                    
                   </tr>
                 

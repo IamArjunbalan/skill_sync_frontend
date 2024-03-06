@@ -46,7 +46,8 @@ function Userprofile() {
     
     <div className='card shadow p-5 me-2'>
     <div>
-      <h3>My profile</h3>
+      <h3>My profile {''} <Link  to={'/userchat'} className='btn btn-info'>{''}<i class="fa-solid fa-message"></i>chat</Link> </h3>
+      
       {/* <span className='border btn'>
         <i  class="fa-solid fa-check" style={{ color: '#63E6BE' }}></i>
       </span> */}
@@ -55,6 +56,7 @@ function Userprofile() {
     </div>
 
     <div className='mt-3 row justify-content-center'>
+    
       <label className='text-center' htmlFor='profile'>
         <input type="file" id='profile' style={{ display: 'none' }}  />
         <img src={`${BASE_URL}/upload/${details.details_image}`}width={'100px'} height={'80px'} alt="img" />

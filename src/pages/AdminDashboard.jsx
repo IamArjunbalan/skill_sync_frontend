@@ -3,7 +3,10 @@ import { Col, Row } from 'react-bootstrap'
 import Adminviewprofile from '../Components/Adminviewprofile'
 import Adminreview from '../Components/Adminreview'
 import Header from '../Components/Header'
-import { userDetails } from '../services/allApis'
+import {  userDetails } from '../services/allApis'
+import AdminMessage from '../Components/AdminMessage'
+
+
 
 
 
@@ -92,6 +95,8 @@ function AdminDashboard() {
        <Adminreview/>
 
        <div>
+
+        <AdminMessage/>
 
         
        </div>

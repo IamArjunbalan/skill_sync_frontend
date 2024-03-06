@@ -22,6 +22,12 @@ function Header({InDashboard}) {
           SkilSync
           </Navbar.Brand>
           </Link>
+          {''}
+          {/* <Link  to={'/userchat'} className='btn btn-info'>{''}<i class="fa-solid fa-message"></i>chat with the community</Link>  */}
+         
+
+         
+          
           {
             InDashboard&&
             <div className='ms-auto btn' style={{backgroundColor:'#c8d6db'}} onClick={handleLogout}>
@@ -31,6 +37,8 @@ function Header({InDashboard}) {
 
             </div>
           }
+         
+         
         
         </Container>
       </Navbar>

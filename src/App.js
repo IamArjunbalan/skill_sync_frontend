@@ -14,6 +14,9 @@ import AdminDashboard from './pages/AdminDashboard';
 import Userinfosub from './pages/Userinfosub';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ChatSection from './pages/ChatSection';
+
+
 
 
 
@@ -34,6 +37,8 @@ function App() {
       <Route path='/Userreview' element={<UserReview/>}/>
       <Route path='/Admindash' element={<AdminDashboard/>}/>
       <Route path='/Userinfo' element={<Userinfosub/>}/>
+      <Route path='/Userchat' element={<ChatSection/>}/>
+      
 
       </Routes>
       <Footer/>
